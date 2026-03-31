@@ -1,4 +1,4 @@
-import { calculator } from '../functions.js';
+import { calculator } from './functions.js';
 
 let operator = '+'
 let num1 = 10
