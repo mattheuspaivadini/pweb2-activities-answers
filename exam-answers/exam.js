@@ -17,7 +17,7 @@ class Exam {
             score += this.weight[i];
     }
   }
-    return score;
+    return score.toFixed(1);
 } 
   
   min(n) {
@@ -59,7 +59,7 @@ class Exam {
 }
 
 
-const example = new Exam([2, 2, 2, 2, 2], ['a', 'b', 'a', 'c', 'd']);
+const example = new Exam([2.0, 2.0, 2.0, 2.0, 2.0], ['a', 'b', 'a', 'c', 'd']);
 
 example.add(['a', 'b', 'b', 'b', 'b']);
 example.add(['a', 'b', 'a', 'c', 'd']);
