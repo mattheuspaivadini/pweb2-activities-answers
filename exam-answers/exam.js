@@ -23,13 +23,15 @@ class Exam {
   min(n) {
   const scores = this.studentsAnswer.map(answers => this.avg(answers));
   scores.sort((a, b) => a - b); 
-  return scores.slice(0, n);    
+  const convert = scores.map(score => parseFloat(score));
+  return convert.slice(0, n);    
   }
   
   max(n) {
     const scores = this.studentsAnswer.map(answers => this.avg(answers));
     scores.sort((a, b) => b - a); 
-    return scores.slice(0, n);    
+    const convert = scores.map(score => parseFloat(score));
+    return convert.slice(0, n);    
   }
   
   lt(num) {
@@ -41,21 +43,21 @@ class Exam {
         result.push(score); 
       }
     }
-    return result;
+    const convert = result.map(score => parseFloat(score));
+    return convert;
   }
 
   gt(num) {
   const result = [];
-
   for (let i = 0; i < this.studentsAnswer.length; i++) { 
     const score = this.avg(this.studentsAnswer[i]);
     if (score > num) {
       result.push(score);
     }
   }
-  return result;
-}
-
+  const convert = result.map(score => parseFloat(score));
+  return convert;
+  }
 }
 
 
